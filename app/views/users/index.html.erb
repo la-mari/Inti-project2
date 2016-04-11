@@ -1,2 +1,29 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Welcome to Inti</h1>
+
+<form action="/users" method="post">
+  <button>Log In</button>
+
+  <label>User Name</label>
+  <input name="user_name" type="text" placeholder="user_name">
+
+  <label>Password</label>
+  <input name="password" type="password" placeholder="Password">
+</form>
+
+
+<form action="/users/new" method="get">
+ <button>Sign Up</button>
+</form>
+
+
+
+<h2>About</h2>
+<p> Join now for free access to research journals.</p>
+
+<h2>Users</h2>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.user_name %></li>
+  <% end %>
+</ul>
