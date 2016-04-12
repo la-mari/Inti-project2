@@ -27,3 +27,11 @@
     <li><%= user.user_name %></li>
   <% end %>
 </ul>
+
+<h2>Publications</h2>
+ <ul>
+  <% @publications.each do |publication| %>
+   <li> <%= publication.title %> - <%= publication.synopsis %> </li>
+  <% end %>
+</ul>
+

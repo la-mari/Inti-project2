@@ -19,6 +19,20 @@
 
 
 
+<ul>
+	<li><%= Publication.inspect %></li>
+    <li><%= Publication.count %></li>
+    <li><%= Publication.last.synopsis %></li>
+    <li><%= Publication.first.user.user_name %></li>
+ </ul>
+
+ <ul>
+  <% @publications.each do |publication| %>
+    <li><%= publication.title %></li>
+  <% end %>
+</ul>
+
+
 
 
  

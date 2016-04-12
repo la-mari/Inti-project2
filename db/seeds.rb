@@ -22,3 +22,16 @@ user.publications.create({
 	publication_date: '21-05-1998',
 	synopsis: 'places to place your gnomes'
 })
+
+user2 = User.create({
+	user_name: "Cat", 
+	password: "meow",
+	password_confirmation: "meow"
+
+	})
+
+user2.publications.create({
+	title: 'cats gone wild',
+	publication_date: '10-02-1991',
+	synopsis: 'research on wild cats'
+})

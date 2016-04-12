@@ -13,8 +13,8 @@ class PublicationsController < ApplicationController
   		})
   	if @publication.save
       session[:publication_id] = @publication.id
-      render text: 'publication saved'
-  		# redirect_to '/'
+      # render text: 'publication saved'
+  		redirect_to '/publications/index'
   	else
   		render :index
   	end
