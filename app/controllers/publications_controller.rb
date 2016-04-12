@@ -13,9 +13,10 @@ class PublicationsController < ApplicationController
   		})
   	if @publication.save
       session[:publication_id] = @publication.id
-  		redirect_to '/'
+      render text: 'publication saved'
+  		# redirect_to '/'
   	else
-  		render :new
+  		render :index
   	end
   end
 end
