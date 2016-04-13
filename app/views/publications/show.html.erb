@@ -22,9 +22,11 @@
 <br>
 Paper will be posted here
 <!-- go to edit page -->
+
+<% if @publication.user.id == current_user.id %>
 <%= button_to "edit", {:controller => :publications, :action => 'edit'},
  :method => :get %>
 
  <%= button_to "delete", publication_path, method: :delete, data: {confirm: 'Are you sure?'} %>
-
+<% end %>
  <%= link_to 'Back', publications_path %>
