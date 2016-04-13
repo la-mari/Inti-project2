@@ -1,5 +1,11 @@
 <h1> User Profile <h1>
 
-
+<% if current_user%>
+	<p>Welcome <%= current_user.user_name %> <br>
+	<h2> Your Publications </h2>
+	<% current_user.publications.each do |publication| %>
+		<%= publication.title %>
+	<% end %>
+<% end %>
 
 
