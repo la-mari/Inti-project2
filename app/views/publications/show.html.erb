@@ -1,7 +1,8 @@
 <%= @publication.inspect %>
-
-
+<br>
+Paper will be posted here
 <!-- go to edit page -->
-
 <%= button_to "edit", {:controller => :publications, :action => 'edit'},
  :method => :get %>
+
+ <%= link_to 'Back', publications_path %>

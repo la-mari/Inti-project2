@@ -1,9 +1,6 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
-
-<% if current_user%>
-  <%= current_user.id %>
-<% end %>
+<%# if current_user%>
+  <%#= current_user.id %>
+<%# end %>
 
 <h1>Welcome to Inti</h1>
 
@@ -40,7 +37,12 @@
 <h2>Publications</h2>
  <ul>
   <% @publications.each do |publication| %>
-   <li> Title: <%= publication.title %> - Synopsis: <%= publication.synopsis %> Author: <%= publication.user.user_name %> Publication Date: <%= publication.publication_date %></li>
+   <li> 
+    <%= link_to(publication.title, publication_path(publication))%> - 
+    Synopsis: <%= publication.synopsis %> 
+    Author: <%= publication.user.user_name %> 
+    Publication Date: <%= publication.publication_date %>
+   </li>
   <% end %>
 </ul>
 
