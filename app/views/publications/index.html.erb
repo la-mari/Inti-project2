@@ -1,7 +1,8 @@
+<%= current_user.user_name if current_user%>
+
+
 <h1>Welcome to Publications</h1>
 <p>Find me in app/views/publications/index.html.erb</p>
-
-
 
 
 <form action="/logout" method="post">
@@ -9,7 +10,7 @@
 <button>Logout</button>
 </form>
 
-
+<!-- forms for more publications -->
 <form action="/publications/index" method="post">
 <input name="title" type="text" placeholder="title">
 <input name="publication_date" type="date" placeholder="DD-MM-YYYY">
@@ -19,18 +20,28 @@
 
 
 
-<ul>
+<% if current_user%>
+	<% current_user.publications.each do |publication| %>
+		<%= publication.title %>
+		<%= publication.publication_date %>
+		<%= publication.synopsis %>
+	<% end %>
+<% end %>
+
+
+
+
+
+
+<!-- <ul>
 	<li><%= Publication.inspect %></li>
     <li><%= Publication.count %></li>
     <li><%= Publication.last.synopsis %></li>
     <li><%= Publication.first.user.user_name %></li>
- </ul>
+ </ul> 
+ -->
 
- <ul>
-  <% @publications.each do |publication| %>
-    <li><%= publication.title %></li>
-  <% end %>
-</ul>
+
 
 
 

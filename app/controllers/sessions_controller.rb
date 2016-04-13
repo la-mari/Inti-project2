@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   def new
+    @users = User.all
+    @publications = Publication.all
   end
 
   def create
