@@ -7,6 +7,7 @@
             <th>Author</th>
             <th>Date Published</th>
             <th>Synopsis</th>
+            <th>Topic</th>
         </tr>
     </thead>
 
@@ -16,6 +17,7 @@
             <td><%= @publication.user.user_name %></td>
             <td><%= @publication.publication_date %></td>
             <td><%= @publication.synopsis %></td>
+            <td><%= @publication.topic.name %></td>
         </tr>
 
  </table>
