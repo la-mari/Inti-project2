@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   get 'publications/index'
 
+  get 'publications/new' => 'publications#new'
+
   get 'sessions/new'
+
+
 
 # to create new user
   get 'users' => 'users#index'

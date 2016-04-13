@@ -4,10 +4,10 @@ class PublicationsController < ApplicationController
     @publication = @user.publications.new
   end
 
-  # def new
-  #   @user = User.find(session[:user_id])
-  #   @publication = @user.publications.new
-  # end
+  def new
+    @user = User.find(session[:user_id])
+    @publication = @user.publications.new
+  end
 
   # def show
   #   @publication = Publication.find(params[:id])
