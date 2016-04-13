@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   post 'publications' => 'publications#create'
   get 'publications/new' => 'publications#new'
   get 'publications/:id' => 'publications#show', as: :publication
-  patch 'publications/:id' => 'publication#update'
+  patch 'publications/:id' => 'publications#update'
   get 'publications/:id/edit' => 'publications#edit', as: :edit_publication
+  delete 'publications/:id' => 'publications#destroy'
 
 
   get 'sessions/new'

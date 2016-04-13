@@ -1,8 +1,30 @@
 <%= @publication.inspect %>
+
+<table class="pure-table pure-table-horizontal">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date Published</th>
+            <th>Synopsis</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+ </table>
 <br>
 Paper will be posted here
 <!-- go to edit page -->
 <%= button_to "edit", {:controller => :publications, :action => 'edit'},
  :method => :get %>
+
+ <%= button_to "delete", publication_path, method: :delete, data: {confirm: 'Are you sure?'} %>
 
  <%= link_to 'Back', publications_path %>

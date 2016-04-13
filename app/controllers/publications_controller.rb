@@ -17,7 +17,14 @@ class PublicationsController < ApplicationController
     @publication = Publication.find(params[:id])
   end
 
+  def destroy
+   @publication = Publication.find(params[:id])
+   @publication.destroy
+   redirect_to publications_path 
+  end
+
   def update
+    @publication = Publication.find(params[:id])
     if @publication.update_attributes(publication_params)
       redirect_to publication_path
     else
