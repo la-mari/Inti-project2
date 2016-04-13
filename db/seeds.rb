@@ -9,6 +9,7 @@
 
 User.destroy_all
 Publication.destroy_all
+Topic.destroy_all
 
 user = User.create({
 	user_name: "Mari", 
@@ -35,3 +36,6 @@ user2.publications.create({
 	publication_date: '10-02-1991',
 	synopsis: 'research on wild cats'
 })
+
+topic1 = Topic.create({name: 'Cats'})
+topic2 = Topic.create({name: 'Dogs'})

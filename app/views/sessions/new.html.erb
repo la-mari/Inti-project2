@@ -4,6 +4,8 @@
 
 <h1>Welcome to Inti</h1>
 
+<% if !current_user %>
+
 <!-- form to log in -->
 <form action="/login" method="post">
   <label>User Name</label>
@@ -22,13 +24,13 @@
 </form>
 
 <br>
-
+<% else %>
 <form action="/logout" method="post">
   <input name="_method" value="DELETE" type="hidden">
 <button>Logout</button>
 </form>
 
-
+<% end %>
 
 <h2>About</h2>
 <p> Access and submit research papers for free!</p>

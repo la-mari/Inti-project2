@@ -7,6 +7,7 @@ class PublicationsController < ApplicationController
   def new
     @user = User.find(session[:user_id])
     @publication = @user.publications.new
+    @topics = Topic.all
   end
 
   def show
@@ -15,6 +16,7 @@ class PublicationsController < ApplicationController
 
   def edit
     @publication = Publication.find(params[:id])
+    @topics = Topic.all
   end
 
   def destroy
@@ -48,7 +50,7 @@ class PublicationsController < ApplicationController
   private
 
   def publication_params
-      params.require(:publication).permit(:title, :publication_date, :synopsis)
+      params.require(:publication).permit(:title, :publication_date, :synopsis, :topic_id)
   end
 
 

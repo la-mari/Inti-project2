@@ -9,6 +9,11 @@
 		<%= f.date_field(:publication_date) %>
 	</div>
 
+		<div class = "pure-control-group">
+		<%= f.label(:topic_id) %>
+		<%= f.collection_select(:topic_id, @topics.all, :id, :name) %>
+	</div>
+
 	<div class = "pure-control-group">
 		<%= f.label(:synopsis) %>
 		<%= f.text_area(:synopsis) %>
