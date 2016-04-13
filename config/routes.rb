@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   post 'publications/index' => 'publications#create'
 
+  get 'users/index'
+
   # get '/users/:user_id/publications/' => 'publications#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
