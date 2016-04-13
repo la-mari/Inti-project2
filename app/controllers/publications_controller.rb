@@ -9,31 +9,42 @@ class PublicationsController < ApplicationController
     @publication = @user.publications.new
   end
 
-  # def show
-  #   @publication = Publication.find(params[:id])
-  # end
+  def show
+    @publication = Publication.find(params[:id])
+  end
 
+  def edit
+    @publication = Publication.find(params[:id])
+  end
+
+  def update
+    if @publication.update_attributes(publication_params)
+      redirect_to publication_path
+    else
+      render :edit
+    end
+  end
 
   def create
     # @publication = Publication.new
     @user = User.find(session[:user_id])
+    @publication = @user.publications.new(publication_params)
 
-    # @publication = Publication.new(publication_params)
-    # @publication.user_id = session[:user_id]
-    @publication = @user.publications.new({
-  	# @publication = Publication.new({
-  		title: params[:title],
-  		publication_date: params[:publication_date],
-  		synopsis: params[:synopsis]
-  		})
   	if @publication.save
-      # session[:publication_id] = @publication.id
       # render text: 'publication saved'
-  		redirect_to '/publications/index'
+  		redirect_to publications_path
   	else
-  		render :index
+  		render :new
   	end
   end
+
+  private
+
+  def publication_params
+      params.require(:publication).permit(:title, :publication_date, :synopsis)
+  end
+
+
 end
 
 

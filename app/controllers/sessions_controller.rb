@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   	if user && user.authenticate(params[:password])
   		session[:user_id] = user.id
   		# render text: 'user is logged in'
-  		redirect_to '/publications/index'
+  		redirect_to publications_path
   	else 
   		render :new
   	end

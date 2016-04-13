@@ -1,1 +1,7 @@
-# <%= Publication.find_by(user_id: params[:user_id])["title"] %>
+<%= @publication.inspect %>
+
+
+<!-- go to edit page -->
+
+<%= button_to "edit", {:controller => :publications, :action => 'edit'},
+ :method => :get %>

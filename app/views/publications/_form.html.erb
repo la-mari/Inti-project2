@@ -1,0 +1,18 @@
+<%= form_for(@publication, {html: {class: "pure-form pure-form-aligned"}}) do |f| %>
+	<div class = "pure-control-group">
+		<%= f.label(:title) %>
+		<%= f.text_field(:title) %>
+	</div>
+
+	<div class = "pure-control-group">
+		<%= f.label(:publication_date) %>
+		<%= f.date_field(:publication_date) %>
+	</div>
+
+	<div class = "pure-control-group">
+		<%= f.label(:synopsis) %>
+		<%= f.text_area(:synopsis) %>
+	</div>
+
+	<%= f.submit({class: "pure-button pure-button-primary"}) %>
+<% end %>

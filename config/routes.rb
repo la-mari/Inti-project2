@@ -1,28 +1,25 @@
 Rails.application.routes.draw do
   root 'sessions#new'
 
-  get 'publications/index'
-
+  get 'publications' => 'publications#index'
+  post 'publications' => 'publications#create'
   get 'publications/new' => 'publications#new'
+  get 'publications/:id' => 'publications#show', as: :publication
+  patch 'publications/:id' => 'publication#update'
+  get 'publications/:id/edit' => 'publications#edit', as: :edit_publication
+
 
   get 'sessions/new'
-
-
-
 # to create new user
   get 'users' => 'users#index'
   get 'users/new' => 'users#new'
   post 'users' => 'users#create'
 
   get '/login' => 'sessions#new'
-
   post '/login' => 'sessions#create'
 
   # get '/login' => 'sessions#new'
-
   delete '/logout' => 'sessions#destroy'
-
-  post 'publications/index' => 'publications#create'
 
   get 'users/index'
 

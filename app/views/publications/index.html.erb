@@ -1,39 +1,27 @@
-<%= current_user.user_name if current_user%>
-
-
-<h1>Welcome to Publications</h1>
-<p>Find me in app/views/publications/index.html.erb</p>
-
-
-<form action="/logout" method="post">
-	<input name="_method" value="DELETE" type="hidden">
-<button>Logout</button>
-</form>
-
-<!-- forms for more publications -->
-<form action="/publications/index" method="post">
-<input name="title" type="text" placeholder="title">
-<input name="publication_date" type="date" placeholder="DD-MM-YYYY">
-<input name="synopsis" type="text" placeholder="synopsis">
-<button>Add Information</button>
-</form>
-
-
-
-<% if current_user%>
-	<% current_user.publications.each do |publication| %>
-		<%= publication.title %>
-		<%= publication.publication_date %>
-		<%= publication.synopsis %>
-	<% end %>
-<% end %>
-
-
-
+<%= "Welcome #{current_user.user_name}" if current_user%>
 <!-- button to access your profile -->
 <form action="/users/index" method="get">
  <button>Go to profile</button>
 </form>
+
+<%= button_to "logout", {:controller => :sessions, :action => 'destroy'},
+ :method => :delete %>
+
+<h1>Welcome to Your Publications</h1>
+
+<% if current_user%>
+<ul>
+	<% current_user.publications.each do |publication| %>
+		<li>
+		<%= link_to(publication.title, publication_path(publication))%>
+		, <%= publication.publication_date %></li>
+		<%# publication.synopsis %>
+	<% end %>
+</ul>
+<% end %>
+
+
+
 
 <!-- <ul>
 	<li><%= Publication.inspect %></li>
