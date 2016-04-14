@@ -9,6 +9,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class ="container">
 	<% if current_user %>
 		<ul class="nav nav-pills">
 			<li role="presentation"><%= link_to 'All Publications', controller: 'publications'%></li>
@@ -22,7 +23,8 @@
 
 
 
-<%= yield %>
+	<%= yield %>
+</div>
 
 </body>
 </html>
