@@ -4,23 +4,25 @@
 
 <h1>Welcome to Inti</h1>
 
-<!-- <img src="images/sol.gif"> -->
+<img src="http://i.imgur.com/TMSAbmP.gif?1">
 
-<img src="inti_app/images/sol.gif" width="16" height="16" alt="Icon" />
+<!-- <img src="inti_app/images/sol.gif" width="16" height="16" alt="Icon" /> -->
 
 <% if !current_user %>
 
 <!-- form to log in -->
+<div class = "form-group">
+  <form action="/login" method="post">
+    <label>User Name</label>
+    <input class="form-control" name="user_name" type="text" placeholder="user_name">
 
-<form action="/login" method="post">
-  <label>User Name</label>
-  <input name="user_name" type="text" placeholder="user_name">
+    <label>Password</label>
+    <input class="form-control" name="password" type="password" placeholder="password">
+    
+    <button type"button" class = "btn btn-success">Log In</button>
+  </form>
+</div>
 
-  <label>Password</label>
-  <input name="password" type="password" placeholder="password">
-  
-  <button type"button" class = "btn btn-success">Log In</button>
-</form>
 <br>
 
 
