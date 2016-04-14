@@ -1,29 +1,29 @@
-<%= form_for(@publication, {html: {class: "pure-form pure-form-aligned"}}) do |f| %>
-	<div class = "pure-control-group">
+<%= form_for(@publication, {html: {class: "form-group"}}) do |f| %>
+	<div class = "form-group">
 		<%= f.label(:title) %>
 		<%= f.text_field(:title) %>
 	</div>
 
-	<div <!-- class = "pure-control-group" -->>
+	<div <class = "form-group">
 		<%= f.label(:publication_date) %>
 		<%= f.date_field(:publication_date) %>
 	</div>
 
-		<div <!-- class = "pure-control-group" -->>
+		<div <class = "form-group" >
 		<%= f.label(:topic_id) %>
 		<%= f.collection_select(:topic_id, @topics.all, :id, :name) %>
 	</div>
 
-	<div <!-- class = "pure-control-group" -->>
+	<div < class = "form-group" >
 		<%= f.label(:synopsis) %>
 		<%= f.text_area(:synopsis) %>
 	</div>
 
-	<div <!-- class = "pure-control-group" -->>
+	<div < class = "form-group" >
 		<%= f.label(:file) %>
 		<%= f.file_field :file %>
 	</div> 
 
 
-	<%= f.submit({class: "pure-button pure-button-primary"}) %>
+	<%= f.submit({class: "btn btn-success"}) %>
 <% end %>
