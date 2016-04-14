@@ -13,8 +13,8 @@
 	 :method => :get %>
 
 <% else %>
-
-	<%= link_to 'Sign In', '/' %>
+	<%= link_to 'Sign In', login_path, :class => 'btn btn-success' %>
+<!-- 	<%= link_to 'Sign In', '/' %> -->
 <% end %>
 
 <h1>Publications</h1>

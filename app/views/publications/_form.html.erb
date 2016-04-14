@@ -1,12 +1,12 @@
 <%= form_for(@publication, {html: {class: "form-group"}}) do |f| %>
 	<div class = "form-group">
 		<%= f.label(:title) %>
-		<%= f.text_field(:title) %>
+		<%= f.text_field :title, :class => 'form-control' %>
 	</div>
 
 	<div <class = "form-group">
 		<%= f.label(:publication_date) %>
-		<%= f.date_field(:publication_date) %>
+		<%= f.date_field :publication_date, :class => 'form-control' %>
 	</div>
 
 		<div <class = "form-group" >
@@ -16,7 +16,7 @@
 
 	<div < class = "form-group" >
 		<%= f.label(:synopsis) %>
-		<%= f.text_area(:synopsis) %>
+		<%= f.text_area :synopsis, :class => 'form-control' %>
 	</div>
 
 	<div < class = "form-group" >
