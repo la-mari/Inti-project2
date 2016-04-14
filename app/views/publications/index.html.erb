@@ -6,10 +6,10 @@
 	 <button>Go to profile</button>
 	</form>
 
-	<%= button_to "logout", {:controller => :sessions, :action => 'destroy'},
+	<%#= button_to "logout", {:controller => :sessions, :action => 'destroy'},
 	 :method => :delete %>
 
-	<%= button_to "Add More", {:controller => :publications, :action => 'new'},
+	<%#= button_to "Add More", {:controller => :publications, :action => 'new'},
 	 :method => :get %>
 
 <% else %>
