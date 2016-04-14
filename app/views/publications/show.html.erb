@@ -1,4 +1,4 @@
-<%= @publication.inspect %>
+
 
 <table class="pure-table pure-table-horizontal">
     <thead>
@@ -22,7 +22,7 @@
  </table>
 <br>
 
-<%= link_to 'Download This Paper', @publication.file_url %>
+<%= link_to 'Download Paper', @publication.file_url %>
 <%#= image_tag publication.file_url.to_s %>
 
 <% if current_user and @publication.user.id == current_user.id %>
