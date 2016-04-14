@@ -1,8 +1,13 @@
 class PublicationsController < ApplicationController
 
   def index
-  	@user = User.find(session[:user_id])
-    @publication = @user.publications.new
+    if params[:user_id]
+    	@user = User.find(params[:user_id])
+      @publications = @user.publications
+    else
+      @publications = Publication.all
+    end
+
   end
 
   def new
@@ -51,7 +56,7 @@ class PublicationsController < ApplicationController
   private
 
   def publication_params
-      params.require(:publication).permit(:title, :publication_date, :synopsis, :topic_id)
+      params.require(:publication).permit(:title, :publication_date, :synopsis, :topic_id, :file)
   end
 
 

@@ -11,6 +11,12 @@ User.destroy_all
 Publication.destroy_all
 Topic.destroy_all
 
+
+
+topic1 = Topic.create({name: 'Cats'})
+topic2 = Topic.create({name: 'Dogs'})
+topic3 = Topic.create({name: 'Elephants'})
+
 user = User.create({
 	user_name: "Mari", 
 	password: "hello",
@@ -21,8 +27,8 @@ user = User.create({
 user.publications.create({
 	title: 'gnomes',
 	publication_date: '21-05-1998',
-	synopsis: 'places to place your gnomes'
-	topic: 'Cats'
+	synopsis: 'places to place your gnomes',
+	topic: topic1
 })
 
 user2 = User.create({
@@ -35,9 +41,10 @@ user2 = User.create({
 user2.publications.create({
 	title: 'cats gone wild',
 	publication_date: '10-02-1991',
-	synopsis: 'research on wild cats'
-	topic: 'Dogs'
+	synopsis: 'research on wild cats',
+	topic: topic2
 })
 
-topic1 = Topic.create({name: 'Cats'})
-topic2 = Topic.create({name: 'Dogs'})
+
+
+

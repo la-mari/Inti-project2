@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   patch 'publications/:id' => 'publications#update'
   get 'publications/:id/edit' => 'publications#edit', as: :edit_publication
   delete 'publications/:id' => 'publications#destroy'
-
+  
+  get 'users/:user_id/publications' => 'publications#index'
 
   get 'sessions/new'
 # to create new user
