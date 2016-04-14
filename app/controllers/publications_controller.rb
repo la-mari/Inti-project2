@@ -1,4 +1,5 @@
 class PublicationsController < ApplicationController
+
   def index
   	@user = User.find(session[:user_id])
     @publication = @user.publications.new

@@ -19,5 +19,11 @@
 		<%= f.text_area(:synopsis) %>
 	</div>
 
+	<div class = "pure-control-group">
+		<%#= f.label(:file) %>
+		<%= f.file_field :file %>
+	</div>
+
+
 	<%= f.submit({class: "pure-button pure-button-primary"}) %>
 <% end %>
