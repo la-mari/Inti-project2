@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'sessions#new'
-
+  root 'static_pages#landing'
+  get 'about' => 'static_pages#about'
   get 'publications' => 'publications#index'
   post 'publications' => 'publications#create'
   get 'publications/new' => 'publications#new'
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new'
   post 'users' => 'users#create'
 
-  get '/login' => 'sessions#new'
+  get '/login' => 'users#login'
   post '/login' => 'sessions#create'
 
   # get '/login' => 'sessions#new'

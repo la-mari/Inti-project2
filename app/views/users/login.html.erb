@@ -1,0 +1,27 @@
+  <% if !current_user %>
+
+  <!-- form to log in -->
+  <div class = "form-group">
+    <form action="/login" method="post">
+      <label>User Name</label>
+      <input class="form-control" name="user_name" type="text" placeholder="username">
+
+      <label>Password</label>
+      <input class="form-control" name="password" type="password" placeholder="password">
+      
+      <button type"button" class = "btn btn-success">Log In</button>
+    </form>
+  </div>
+
+
+  <%#= link_to 'Sign Up', users_new_path, :class => 'btn btn-warning' %>
+<!--   <form action="/users/new" method="get"> 
+ <button>Sign Up</button> 
+</form>  -->
+
+  <%# else %>
+  <!-- <form action="/logout" method="post">
+    <input name="_method" value="DELETE" type="hidden">
+  <button>Logout</button> -->
+  <!-- </form> -->
+  <% end %>

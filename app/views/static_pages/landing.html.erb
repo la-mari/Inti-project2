@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1>Welcome to Inti!</h1>
+  <%= image_tag "sol.png" %>
+  <p>Inti is a community-driven collection of research publications where  you can access and submit research publications for free!</p>
+  <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
+  <%= link_to 'Log In', login_path, :class => 'btn btn-info' %>
+    <%= link_to 'Sign Up', users_new_path, :class => 'btn btn-warning' %>
+
+</div>
+
+  <h2>Publications</h2>
+    
+  <%#if current_user %>
+    <%#= button_to "Add More", {:controller => :publications, :action => 'new'},
+     :method => :get %>
+  <%# end %>
+
+   <ul>
+    <% @publications.each do |publication| %>
+     <li> 
+      <%= link_to(publication.title, publication_path(publication))%> - 
+      Synopsis: <%= publication.synopsis %> 
+      Author: <%= publication.user.user_name %> 
+      Publication Date: <%= publication.publication_date %>
+     </li>
+    <% end %>
+  </ul>
+</div>
