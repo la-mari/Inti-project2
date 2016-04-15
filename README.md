@@ -4,7 +4,9 @@ Project: Inti is a site where researchers can share research papers for free. Us
 
 Trello: https://trello.com/b/Al48IUky
 
-Startup Instructions: This app can be accessed through the link at the top of this readme. Users can then create accounts by simply signing up with a user name and password. Once a user is logged in, the can use the navigation bar to access all the publications, access a list of their publications, or add a new publication. Features include the abolity to update and delete entries. Users also have the ability to log out. 
+Startup Instructions: This app can be accessed through the link at the top of this readme. Users can then create accounts by simply signing up with a user name and password. Once a user is logged in, the can use the navigation bar to access all the publications, access a list of their publications, or add a new publication. Features include the abolity to update and delete entries. Users also have the ability to log out.
+
+Technologies Used: This app was created using the ruby programming language and the rails framework. CSS styling was accomplished with bootstrap, and the uploading of images/files was done with carrier wave.  
 
 Unsolved problems: hosting uploads through amazon web services so that they can be accessed through heroku.
 
