@@ -23,14 +23,15 @@
 <br>
 
 <%= link_to 'Download Paper', @publication.file_url %>
+<br>
 <%#= image_tag publication.file_url.to_s %>
 
 <% if current_user and @publication.user.id == current_user.id %>
-<%= button_to "edit", {:controller => :publications, :action => 'edit'},
- :method => :get %>
+<%= link_to "Edit", {:controller => :publications, :action => 'edit'},
+ :method => :get %><br>
 
- <%= button_to "delete", publication_path, method: :delete, data: {confirm: 'Are you sure?'} %>
+ <%= link_to "Delete", publication_path, method: :delete, data: {confirm: 'Are you sure?'} %>
 <% end %>
-
+<br>
 
  <%= link_to 'Back', publications_path %>
