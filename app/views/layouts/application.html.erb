@@ -14,6 +14,7 @@
 		<ul class="nav nav-pills">
 			<li role="presentation"><%= link_to 'Home', root_path%></li>
 			<li role="presentation"><%= link_to 'All Publications', publications_path%></li>
+			<li role="presentation"><%= link_to 'Your Publications', user_publications_path(current_user)%></li>
 			<li role="presentation"><%= link_to 'Add a Publication', publications_new_path %></li>
 			<li><%= link_to 'Log Out', logout_path, method: :delete %></li>
 		</ul>

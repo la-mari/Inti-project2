@@ -1,5 +1,5 @@
 <% if current_user%>
-	<h3>Welcome to your publications <%= current_user.user_name %> </h3><br>
+	<h3>Your publications</h3><br>
 
 	<% current_user.publications.each do |publication| %>
 		<li><%= publication.title %></li>
