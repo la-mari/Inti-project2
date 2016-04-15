@@ -12,6 +12,7 @@
 <div class ="container">
 	<% if current_user %>
 		<ul class="nav nav-pills">
+			<li role="presentation"><%= link_to 'Home', action: 'landing', controller: 'static_pages'%></li>
 			<li role="presentation"><%= link_to 'All Publications', controller: 'publications'%></li>
 			<li role="presentation"><%= link_to 'Add a Publication', publications_new_path %></li>
 			<li><%= link_to 'Log Out', logout_path, method: :delete %></li>
