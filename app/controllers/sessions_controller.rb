@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   		# render text: 'user is logged in'
   		redirect_to publications_path
   	else 
-  		render :new
+  		render 'users/login'
   	end
   end
 
