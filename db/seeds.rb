@@ -13,9 +13,16 @@ Topic.destroy_all
 
 
 
-topic1 = Topic.create({name: 'Cats'})
-topic2 = Topic.create({name: 'Dogs'})
-topic3 = Topic.create({name: 'Elephants'})
+topic1 = Topic.create({name: 'Medicine'})
+topic2 = Topic.create({name: 'Civil Engineering'})
+topic3 = Topic.create({name: 'Linguistics'})
+topic4 = Topic.create({name: 'Biology'})
+topic5 = Topic.create({name: 'Computer Science'})
+topic6 = Topic.create({name: 'Chemistry'})
+topic7 = Topic.create({name: 'Environmental Engieering'})
+topic8 = Topic.create({name: 'Materials Science'})
+topic9 = Topic.create({name: 'Math'})
+topic10 = Topic.create({name: 'Psychology'})
 
 user = User.create({
 	user_name: "Mari", 

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'publications/:id/edit' => 'publications#edit', as: :edit_publication
   delete 'publications/:id' => 'publications#destroy'
   
-  get 'users/:user_id/publications' => 'publications#index'
+  get 'users/:user_id/publications' => 'publications#index', as: :user_publications
 
   get 'sessions/new'
 # to create new user

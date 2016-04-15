@@ -1,17 +1,6 @@
 
 <% if current_user %>
 	<%= "Welcome #{current_user.user_name}"%>
-	<!-- button to access your profile -->
-	<form action="/users/index" method="get">
-	 <button>Go to profile</button>
-	</form>
-
-	<%#= button_to "logout", {:controller => :sessions, :action => 'destroy'},
-	 :method => :delete %>
-
-	<%#= button_to "Add More", {:controller => :publications, :action => 'new'},
-	 :method => :get %>
-
 <% else %>
 	<%= link_to 'Sign In', login_path, :class => 'btn btn-success' %>
 <!-- 	<%= link_to 'Sign In', '/' %> -->

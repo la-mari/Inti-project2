@@ -5,10 +5,42 @@
   <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
   <%= link_to 'Log In', login_path, :class => 'btn btn-info' %>
     <%= link_to 'Sign Up', users_new_path, :class => 'btn btn-warning' %>
-
 </div>
 
-  <h2>Publications</h2>
+<h2>Latest Publications</h2>
+<div class="row">
+    <% @publications.each do |publication| %>
+
+
+     
+    <%# publication.user.user_name %> 
+    <%#= publication.publication_date %>
+ 
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag "paper.png" %>
+      <div class="caption">
+        <h3><%=publication.title%></h3>
+        <p><%= publication.synopsis %></p>
+        <p><%= link_to("go to", publication_path(publication), { class:"btn btn-primary", role:"button"})%>
+         <%= link_to(publication.user.user_name, user_publications_path(publication.user), { class:"btn btn-default", role:"button"})%></p>
+      </div>
+    </div>
+  </div>
+
+    <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
     
   <%#if current_user %>
     <%#= button_to "Add More", {:controller => :publications, :action => 'new'},
@@ -16,13 +48,6 @@
   <%# end %>
 
    <ul>
-    <% @publications.each do |publication| %>
-     <li> 
-      <%= link_to(publication.title, publication_path(publication))%> - 
-      Synopsis: <%= publication.synopsis %> 
-      Author: <%= publication.user.user_name %> 
-      Publication Date: <%= publication.publication_date %>
-     </li>
-    <% end %>
+
   </ul>
 </div>
