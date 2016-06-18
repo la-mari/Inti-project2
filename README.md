@@ -1,6 +1,8 @@
 #Inti
-
+## Project 2
 <https://inti-app.herokuapp.com/>
+
+![Inti App](http://i.imgur.com/BqRYswe.png "App Screenshot")
 
 ### Project Description:
 Inti is a site where researchers can share research papers for free. Users can make accounts and post research publications for all to read. Postings can also be updated and deleted. This app is named after, Inti, the ancient Incan sun god who gave light and knowledge to his people.
@@ -26,9 +28,6 @@ This app can be accessed through the link at the top of this ReadMe. Users can t
 * Host uploads through Amazon Web Services (AWS)
 * Add a search feature
 * Give users ability to add comments
-
-#####App Screenshot:
-![Inti App](http://i.imgur.com/BqRYswe.png "App Screenshot")
 
 
 
